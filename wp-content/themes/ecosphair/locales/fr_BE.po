@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Acacia\n"
+"POT-Creation-Date: 2022-05-06 16:02+0200\n"
+"PO-Revision-Date: 2022-05-06 16:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive-article.php:4
+msgid "Si vous voulez en savoir encore plus"
+msgstr "Si vous voulez en savoir encore plus"
+
+#: archive-article.php:6
+msgid "Quelques articles"
+msgstr "Quelques articles"
+
+#: archive-article.php:9 archive-article.php:29 index.php:21 index.php:60
+msgid "Voir plus sur"
+msgstr "Voir plus sur"
+
+#: archive-article.php:21 index.php:77
+msgid "Il n'y a pas de nouveaux articles"
+msgstr "Il n'y a pas de nouveaux articles"
+
+#: archive-article.php:26
+msgid "Quelques vidéos"
+msgstr "Quelques vidéos"
+
+#: archive-article.php:41
+msgid "Il n'y a pas de nouvelles vidéos"
+msgstr "Il n'y a pas de nouvelles vidéos"
+
+#: archive-module.php:4
+msgid "Modules"
+msgstr "Modules"
+
+#: archive-module.php:7
+msgid "Voir plus sur "
+msgstr "Voir plus sur "
+
+#: archive-module.php:24 index.php:38
+msgid "Il n'y a pas de nouveaux projets"
+msgstr "Il n'y a pas de nouveaux projets"
+
+#: footer.php:6
+msgid "Pied de la page d'"
+msgstr "Pied de la page d'"
+
+#: footer.php:7
+msgid "Retrouvez nous aussi sur"
+msgstr "Retrouvez nous aussi sur"
+
+#: header.php:15
+msgid "Navigation d'"
+msgstr "Navigation d'"
+
+#: index.php:4
+msgid ", la vie telle que nous la connaissons sur terre"
+msgstr ", la vie telle que nous la connaissons sur terre"
+
+#: index.php:8 template-about.php:47
+msgid "Contacter"
+msgstr "Contacter"
+
+#: index.php:11
+msgid "En quoi "
+msgstr "En quoi "
+
+#: index.php:11
+msgid " peut-elle vous aider ?"
+msgstr " peut-elle vous aider ?"
+
+#: index.php:12
+msgid ""
+"\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+"doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore "
+"veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim "
+"ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia "
+"consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque "
+"porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, "
+"adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et "
+"dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis "
+"nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid "
+"ex ea commodi consequatur?"
+msgstr ""
+"\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+"doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore "
+"veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim "
+"ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia "
+"consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque "
+"porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, "
+"adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et "
+"dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis "
+"nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid "
+"ex ea commodi consequatur?"
+
+#: index.php:14 index.php:50
+msgid "En savoir plus"
+msgstr "En savoir plus"
+
+#: index.php:17
+msgid "Quelles sont les solutions proposées ? "
+msgstr "Quelles sont les solutions proposées ? "
+
+#: index.php:18
+msgid "Voir tous les modules"
+msgstr "Voir tous les modules"
+
+#: index.php:42
+msgid "Avec qui ?"
+msgstr "Avec qui ?"
+
+#: index.php:56
+msgid "Quelques articles sur nous"
+msgstr "Quelques articles sur nous"
+
+#: index.php:57
+msgid "Voir tous les articles"
+msgstr "Voir tous les articles"
+
+#: template-about.php:7
+msgid "Pourquoi ?"
+msgstr "Pourquoi ?"
+
+#: template-about.php:16
+msgid "Historique"
+msgstr "Historique"
+
+#: template-contact.php:13
+msgid "Nos coordonnées"
+msgstr "Nos coordonnées"
+
+#: template-contact.php:25
+msgid "Oups ! Il y a des erreurs dans le formulaire"
+msgstr "Oups ! Il y a des erreurs dans le formulaire"
+
+#: template-contact.php:28
+msgid "À qui"
+msgstr "À qui"
+
+#: template-contact.php:37
+msgid "Nom"
+msgstr "Nom"
+
+#: template-contact.php:43
+msgid "Prénom"
+msgstr "Prénom"
+
+#: template-contact.php:49
+msgid "E-mail"
+msgstr "E-mail"
+
+#: template-contact.php:55
+msgid "Objet"
+msgstr "Objet"
+
+#: template-contact.php:61
+msgid "Message"
+msgstr "Message"
+
+#: template-contact.php:69
+msgid "conditions générales d'utilisation"
+msgstr "conditions générales d'utilisation"
+
+#: template-contact.php:69
+msgid "J'accepte les :condition "
+msgstr "J'accepte les :condition "
+
+#: template-contact.php:76
+msgid "Envoyer"
+msgstr "Envoyer"
