@@ -73,7 +73,7 @@
 		<?php endif; ?>
 	</section>
 	<section aria-labelledby="articles" class="layout__article articles">
-		<h2 id="articles" class="articles__title" aria-level="2"><?= __('Quelques articles sur nous', 'ecosphair') ?></h2>
+		<h2 id="articles" class="article__title" aria-level="2"><?= __('Quelques articles sur nous', 'ecosphair') ?></h2>
 		<a href="<?= get_post_type_archive_link('article'); ?>"
 		   class="articles__links"><?= __('Voir tous les articles', 'ecosphair') ?></a>
 		<div class="articles__article article">

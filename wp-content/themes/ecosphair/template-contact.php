@@ -39,7 +39,7 @@
 								<label for="who" class="form__label"><?= __('À qui', 'ecosphair') ?></label>
 								<select name="who" id="who" class="form__select">
 									<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-										<option value="ISSeP"><?= get_the_title() ?></option>
+										<option class="form__option" value="ISSeP"><?= get_the_title() ?></option>
 									<?php endwhile; ?>
 									<?php endif; ?>
 								</select>

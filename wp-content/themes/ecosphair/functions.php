@@ -188,14 +188,12 @@ function ecosphair_get_modules($count = 20){
     //2. on retourne l'objet WP_Query
     return $modules;
 }
-function ecosphair_get_partners($count = 20){
+function ecosphair_get_partners(){
     //1. on instancie l'objet WP_Query
     $partners = new WP_Query([
         //arguments
         'post_type' => 'partner',
-        'orderby' =>'date',
         'order'=>'ASC',
-        'posts_per_page' => $count,
     ]);
     //2. on retourne l'objet WP_Query
     return $partners;

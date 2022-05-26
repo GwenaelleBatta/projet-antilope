@@ -13,7 +13,7 @@
 							</header>
 							<div class="project__image">
 								<figure class="project__fig">
-									<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'trip__thumb']); ?>
+									<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'project__thumb']); ?>
 								</figure>
 								<div class="project__circle"></div>
 								<div class="project__circle"></div>

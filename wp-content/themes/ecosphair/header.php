@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" >
 	<meta name="author" content="Batta Gwenaëlle">
 	<meta name="description" content="Projet Client">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -26,27 +26,16 @@
 					<a href="<?= $link->url; ?>"
 							<?= $link->title ? 'title = "' . $link->title . '"' : ''; ?>
 					   class="nav__link"><?= $link->label; ?></a>
-					<?php if ($link->hasSubItems()): ?>
-						<ul class="nav__subcontainer">
-							<?php foreach ($link->subitems as $sub): ?>
-								<li class="<?= $link->getBemClasses('nav__item') ?>">
-									<a href="<?= $sub->url; ?>"
-											<?= $sub->title ? 'title = "' . $sub->title . '"' : ''; ?>
-									   class="nav__link"><?= $sub->label; ?></a>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					<?php endif; ?>
 				</li>
 			<?php endforeach; ?>
-			<div class="languages">
+			<ul class="languages">
 				<?php foreach (pll_the_languages(['raw' => true]) as $code => $locale):; ?>
 					<li class="nav__languages">
-						<a href="<?= $locale['url']; ?>" class="nav__locale" lang="<?= $locale['locale']; ?>"
+						<a href="<?= $locale['url']; ?>" class="nav__locale <?= $locale['current_lang']?' nav__locale--current':''?>" lang="<?= $locale['locale']; ?>"
 						   hreflang="<?= $locale['locale'] ?>" title="<?= $locale['name']; ?>"><?= $code ?></a>
 					</li>
 				<?php endforeach; ?>
-			</div>
+			</>
 		</ul>
 	</nav>
 </header>
