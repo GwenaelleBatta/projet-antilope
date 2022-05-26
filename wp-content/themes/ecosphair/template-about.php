@@ -47,7 +47,10 @@
 							<p class="who__text"><?=get_the_content() ?></p>
 							<a class="who__link" href="<?= get_the_permalink(ecosphair_get_template_page('template-contact')) ?>"><?= __('Contacter', 'ecosphair') ?></a>
 						</div>
-						<figure class="who__figure">
+						<figure class="who__figure"><span class="actor__circle"></span>
+							<span class="actor__circle"></span>
+							<span class="actor__circle"></span>
+							<span class="actor__circle"></span>
 							<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'trip__thumb']); ?>
 						</figure>
 					</article>

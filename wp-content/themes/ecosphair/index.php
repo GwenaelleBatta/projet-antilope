@@ -19,6 +19,9 @@
 			   class="help__links"> <?= __('En savoir plus', 'ecosphair') ?></a>
 		</div>
 		<figure class="help__figure">
+			<span class="help__circle"></span>
+			<span class="help__circle"></span>
+			<span class="help__circle"></span>
 			<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'help__thumb']); ?>
 		</figure>
 	</section>
@@ -66,6 +69,9 @@
 					   class="actor__link"><?= __('En savoir plus', 'ecosphair') ?></a>
 				</div>
 				<figure class="actor__figure">
+					<span class="actor__circle"></span>
+					<span class="actor__circle"></span>
+					<span class="actor__circle"></span>
 					<?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'trip__thumb']); ?>
 				</figure>
 			</article>
