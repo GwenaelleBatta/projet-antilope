@@ -17,6 +17,9 @@
 			</section>
 			<section class="about__section history">
 				<h3 class="history__title"><?= __('Historique', 'ecosphair') ?></h3>
+				<svg viewBox="0 0 50% 50%" xmlns="http://www.w3.org/2000/svg" class="history__svg">
+					<line x1="20" y1="0" x2="20" y2="1200"  class="history__line"/>
+				</svg>
 				<ul class="history__list">
 					<?php if (($history = ecosphair_get_history())->have_posts()):while ($history->have_posts()): $history->the_post(); ?>
 						<article class="article__history">

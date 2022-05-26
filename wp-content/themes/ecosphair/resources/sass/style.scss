@@ -20,6 +20,33 @@ main {
   align-items: center;
 }
 
+.legales {
+  margin-bottom: 0px;
+}
+
+.legales__content {
+  display: flex;
+  min-width: 1000px;
+}
+
+.mail a {
+  text-decoration: none;
+  color: #5ABFBF;
+}
+
+.coordinates__address p.coordinates__adress {
+  margin-bottom: 0px;
+}
+
+.coordinates section, .coordinates p {
+  margin-bottom: 20px;
+}
+
+.legales__position {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__nav {
   background-color: #AEE6F2;
   margin-bottom: 5.533333333333333em; /*85/15*/
@@ -97,6 +124,17 @@ main {
   max-width: 2.333333333333333em;
   max-height: 2.333333333333333em;
   margin-right: 1em;
+}
+
+.footer__legale {
+  text-decoration: none;
+  color: #01595A;
+  font-weight: 600;
+}
+
+.footer__legale:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
 }
 
 .nav__liste {
@@ -261,7 +299,16 @@ main {
   font-weight: 600;
   margin-top: 0.6666666666666667em; /*10/15*/
 }
-
+.history__svg{
+  position: absolute;
+  right: 48%;
+  height: 100%;
+  width: 50px;
+}
+.history__line{
+  stroke:#A0BF35;
+  stroke-width: 1px;
+}
 .module__link, .article__link, .project__link, .footer__link, .video__link {
   position: absolute;
   top: 0;
@@ -383,7 +430,7 @@ p {
   max-width: 28.125em; /*450/16*/
 }
 
-h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title {
+h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title, h2.confident__title, h2.coordinate__title {
   font-size: 1.875em; /*30/16*/
   max-width: 18.33333333333333em; /*550/30*/
   font-weight: 700;
@@ -412,26 +459,33 @@ h2.singleModule__title {
   font-weight: 700;
 }
 
-.test {
+.singleModule__picture {
   display: flex;
 }
 
-.singleModule__figure {
-  display: inline-flex;
+.singleModule__galerie {
+  display: flex;
+  max-height: 430px;
   border-radius: 1.5625em; /*25/16*/
   border: 1px solid #A0BF35;
   margin-right: 3.75em; /*60/16*/
+  //margin-bottom: 5em; /*80/16*/
 }
 
 .singleModule__galerie:nth-of-type(2) {
-  position: relative;
-  margin-top: 5em; /*80/16*/
+  margin-top: 5em;
 }
 
-.singleModule__galerie img {
+.singleModule__figure {
+  position: relative;
+  top: -5%;
+  right: 5%;
+}
+
+.singleModule__figure img {
   max-width: 20.625em; /*330/16*/
   border-radius: 1.5625em; /*25/16*/
-  position: relative;
+
 }
 
 .singleModule__content {
@@ -459,18 +513,25 @@ h2.singleModule__title {
   display: flex;
 }
 
-.singleModule__why {
+.singleModule__why, {
+  border-right: 2px solid #A0BF35;
+  margin-bottom: 9.6875em; /*155/16*/
+  padding-right: 6.25em; /*100/16*/
+}
+
+.legales__section {
   border-right: 2px solid #A0BF35;
   margin-bottom: 9.6875em; /*155/16*/
 }
 
-.singleModule__who {
+.singleModule__who, .confident {
   margin-left: 6.25em; /*100/16*/
   margin-bottom: 9.6875em; /*155/16*/
 }
 
-.singleModule__why {
-  padding-right:  6.25em; /*100/16*/
+.confident, .legales__section {
+  flex: 1;
+  max-height: 400px;
 }
 
 .project {
@@ -486,7 +547,7 @@ h2.singleModule__title {
   margin-bottom: 1em;
 }
 
-.projects__title, .contact__title, .articles h2.articles__title, {
+.projects__title, .contact__title, .articles h2.articles__title, h2.legales__title {
   font-size: 1.875em; /*30/16*/
   text-transform: uppercase;
   color: #01595A;
@@ -576,7 +637,32 @@ h4.who__title {
   order: -1;
   position: relative;
 }
-
+.contact__circle:nth-of-type(1){
+  width: 4.375em; /*70/16*/
+  height: 4.375em; /*70/16*/
+  border-radius: 50%;
+  background-color: #E2ECC2;
+  position: absolute;
+  left: 0%;
+}
+.contact__circle:nth-of-type(2){
+  width: 8.75em; /*140/16*/
+  height: 8.75em; /*140/16*/
+  border-radius: 50%;
+  background-color: #E2ECC2;
+  position: absolute;
+  left: 0%;
+  bottom: -12%;
+}
+.contact__circle:nth-of-type(3){
+  width: 6.5625em; /*105/16*/
+  height: 6.5625em; /*105/16*/
+  border-radius: 50%;
+  background-color: #E2ECC2;
+  position: absolute;
+  right: -20%;
+  bottom: 50%;
+}
 .project:nth-of-type(2) .project__circle:nth-of-type(1) {
   transition: all 0.3s ease-in-out;
   position: absolute;
@@ -771,6 +857,14 @@ h4.information__title {
   line-height: 1.5em; /*30/20*/
 }
 
+.coordinates h4 {
+  font-size: 1.25em; /*20/16*/
+  font-weight: 600;
+  max-width: 15em; /*300/20*/
+  text-transform: uppercase;
+  line-height: 1.5em; /*30/20*/
+}
+
 .actor__article, .who__article {
   display: flex;
 }
@@ -869,6 +963,7 @@ h4.information__title {
   outline: 1px solid #A0BF35;
   outline-offset: 1.25em; /*20/16*/
   border-radius: 50%;
+  position: relative;
 }
 
 .contact__forms p {
@@ -960,7 +1055,9 @@ textarea.form__input {
   font-size: 1.125em; /*18/16*/
   margin-top: 0.36em; /*50/16*/
 }
-
+.history{
+  position: relative;
+}
 .history__cards {
   position: relative;
   display: flex;

@@ -15,9 +15,9 @@
 								<figure class="project__fig">
 									<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'project__thumb']); ?>
 								</figure>
-								<div class="project__circle"></div>
-								<div class="project__circle"></div>
-								<div class="project__circle"></div>
+								<span class="project__circle"></span>
+								<span class="project__circle"></span>
+								<span class="project__circle"></span>
 							</div>
 							<div class="project__excerpt">
 								<p>

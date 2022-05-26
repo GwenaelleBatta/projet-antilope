@@ -7,6 +7,9 @@
 			<div class="contact__position">
 				<div class="contact__content">
 					<figure class="contact__figure">
+						<span class="contact__circle"></span>
+						<span class="contact__circle"></span>
+						<span class="contact__circle"></span>
 						<img src="<?= wp_get_attachment_image_src(get_field('image'), 'medium_large')[0] ?? null; ?>"
 							 alt="Photo de quelqu'un qui rédige un mail" class="contact__image">
 					</figure>

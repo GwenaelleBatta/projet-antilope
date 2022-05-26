@@ -16,6 +16,7 @@
 			<?php endwhile; ?>
 			<?php endif; ?>
 		</ul>
+		<a href="<?=get_the_permalink(ecosphair_get_template_page('template-legale'))?>" class="footer__legale"><?= __('Mentions légales', 'ecosphair') ?></a>
 	</section>
 </footer>
 </body>

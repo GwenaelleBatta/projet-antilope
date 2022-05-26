@@ -23,7 +23,7 @@
 					<p class="singleModule__content"><?= get_field('qui') ?></p>
 				</section>
 			</div>
-			<div class="test">
+			<div class="singleModule__picture">
 				<div class="singleModule__galerie">
 					<figure class="singleModule__figure">
 						<img src="<?= get_field('galerie1') ?>"
