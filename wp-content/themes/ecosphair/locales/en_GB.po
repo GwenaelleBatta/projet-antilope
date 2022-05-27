@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Acacia\n"
 "POT-Creation-Date: 2022-05-26 15:06+0200\n"
-"PO-Revision-Date: 2022-05-26 15:07+0200\n"
+"PO-Revision-Date: 2022-05-27 18:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -81,7 +81,7 @@ msgstr "How "
 
 #: index.php:15
 msgid " peut-elle vous aider ?"
-msgstr "can help you ? "
+msgstr "can help you ?"
 
 #: index.php:16
 msgid ""
@@ -141,11 +141,11 @@ msgstr "Why ?"
 
 #: single-module.php:22
 msgid "Pour qui ?"
-msgstr "Why ?"
+msgstr "Who for ?"
 
 #: single-module.php:30 single-module.php:36 single-module.php:42
 msgid "Photo du modules "
-msgstr "See all modules"
+msgstr "See all modules "
 
 #: template-about.php:19
 msgid "Historique"
@@ -165,7 +165,7 @@ msgstr "Oops! There are errors in the form"
 
 #: template-contact.php:39
 msgid "À qui"
-msgstr "Who  "
+msgstr "Who"
 
 #: template-contact.php:49
 msgid "Nom"

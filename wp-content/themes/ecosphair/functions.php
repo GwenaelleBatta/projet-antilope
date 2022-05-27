@@ -325,7 +325,7 @@ function ecosphair_get_contact_field_error($field)
         return '';
     }
 
-    return '<p>Ce champ ne respecte pas : ' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
+    return '<p class="contact__error">Ce champ ne respecte pas : ' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
 }
 function ecosphair_mix($path)
 {

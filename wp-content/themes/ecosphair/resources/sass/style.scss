@@ -7,7 +7,7 @@ body {
 }
 
 img {
-/ width:100 %;
+  width: 100%;
   height: 100%;
 }
 
@@ -285,7 +285,7 @@ main section {
 .contact__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   flex: 40%;
   margin-left: 8.125em; /*130/16*/
 }
@@ -354,6 +354,7 @@ main section {
 .form__actions {
   display: inline-block;
 }
+
 .why__figure {
   position: relative;
   display: inline-block;
@@ -482,13 +483,22 @@ h4.who__title {
   margin-bottom: 0.6666666666666667em; /*12/18*/
 }
 h3.information__title {
-  margin-top: 7.5em; /*120/16*/
+  margin-top: 4em; /*120/16*/
+  font-size: 1.5625em; /*25/16*/
+  font-weight: 600;
+  margin-bottom: 1.5em; /*24/16*/
+  max-width: 300px;
+  text-transform: uppercase;
+  line-height: 1.875em; /*30/16*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 h4.information__title {
   font-size: 1.25em; /*20/16*/
   font-weight: 600;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   max-width: 15em; /*300/20*/
   text-transform: uppercase;
   line-height: 1.5em; /*30/20*/
@@ -505,9 +515,9 @@ h4.information__title {
   margin-bottom: 0.3125em; /*5/16*/
   line-height: 1em;
 }
-.contact__forms p {
+.contact__error{
   margin: 0;
-  color: #cc6666;
+  color: #CC6666;
 }
 textarea.form__input {
   font-family: Serenity;
@@ -971,7 +981,7 @@ article.article__article .article__cards, article.video .video__cards {
   border-radius: 100%;
 }
 .project:nth-of-type(1), .project:nth-of-type(4), .project:nth-of-type(5) {
-  border: #A0BF35 solid 2px;
+  border: #A0BF35 solid 1px;
   border-radius: 1.5625em; /*25/16*/
 }
 .project:nth-of-type(2), .project:nth-of-type(3), .project:nth-of-type(6) {
@@ -1014,6 +1024,17 @@ h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articl
   text-transform: uppercase;
   line-height: 1.333333333333333em; /*40/30*/
 }
+h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article__title, h3.video__title, h4.video__title {
+  font-size: 1.5625em; /*25/16*/
+  font-weight: 600;
+  margin-bottom: 1.875em; /*30/16*/
+  max-width: 300px;
+  text-transform: uppercase;
+  line-height: 1.875em; /*30/16*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 //-------------------------80
 .actor .actor__article:nth-child(odd) .actor__figure, .who .who__article:nth-child(odd) .who__figure {
   order: -1;
@@ -1044,17 +1065,7 @@ h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articl
 }
 
 //-------------------------88
-h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article__title, h3.video__title, h4.video__title, h3.information__title {
-  font-size: 1.5625em; /*25/16*/
-  font-weight: 600;
-  margin-bottom: 1.875em; /*30/16*/
-  max-width: 300px;
-  text-transform: uppercase;
-  line-height: 1.875em; /*30/16*/
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
+
 //-------------------------90
 .project:nth-of-type(2) .project__fig, .project:nth-of-type(3) .project__fig, .project:nth-of-type(6) .project__fig {
   outline: #A0BF35 solid 2px;
@@ -1071,12 +1082,16 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 
 //-------------------------93
 .project:nth-of-type(2) .project__fig img, .project:nth-of-type(3) .project__fig img, .project:nth-of-type(6) .project__fig img {
-  border: #A0BF35 solid 2px;
+  border: #A0BF35 solid 1px;
   border-radius: 50%;
   width: 100%;
   height: 100%;
 }
 //-------------------------100
+//#contact{
+//  color: #000000;
+//  font-size: 1.2em; /*18/15*/
+//}
 .actor .actor__article:nth-child(even) .actor__circle:nth-of-type(1), .who .who__article:nth-child(even) .actor__circle:nth-of-type(1) {
   width: 6.5625em; /*105/16*/
   height: 6.5625em; /*105/16*/

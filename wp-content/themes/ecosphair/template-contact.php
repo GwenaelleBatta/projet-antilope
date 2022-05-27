@@ -32,7 +32,7 @@
 				</div>
 				<div class="contact__forms">
 					<?php if (!isset($_SESSION['contact_form_feedback']) || !$_SESSION['contact_form_feedback']['success']) : ?>
-						<form action="<?= get_home_url(); ?>/wp-admin/admin-post.php" method="POST"
+						<form action="<?= substr(get_home_url(), 0,-2); ?>wp-admin/admin-post.php" method="POST"
 							  class="contact__form form"
 							  id="contact">
 							<?php if (isset($_SESSION['contact_form_feedback'])) : ?>
@@ -94,8 +94,7 @@
 							</div>
 						</form>
 					<?php else : ?>
-						<p class="form__end"
-						   id="contact"><?= __('Merci ! Votre message a bien été envoyé.', 'ecosphair') ?></p>
+						<p class="form__end" id="contact"><?= __('Merci ! Votre message a bien été envoyé.', 'ecosphair') ?></p>
 						<?php unset($_SESSION['contact_form_feedback']); endif; ?>
 				</div>
 			</div>
