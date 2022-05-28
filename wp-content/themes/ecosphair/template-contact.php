@@ -36,7 +36,7 @@
 							  class="contact__form form"
 							  id="contact">
 							<?php if (isset($_SESSION['contact_form_feedback'])) : ?>
-								<p><?= __('Oups ! Il y a des erreurs dans le formulaire', 'ecosphair') ?></p>
+								<p class="form__error"><?= __('Oups ! Il y a des erreurs dans le formulaire', 'ecosphair') ?></p>
 							<?php endif; ?>
 							<div class="form__field">
 								<label for="who" class="form__label"><?= __('À qui', 'ecosphair') ?></label>
@@ -83,7 +83,7 @@
 							<div class="form__field">
 								<label for="rules" class="form__checkbox">
 									<input type="checkbox" name="rules" id="rules" value="1"/>
-									<span class="form__checklabel"><?= str_replace(':condition', '<a href="#">' . __('conditions générales d\'utilisation', 'ecosphair') . '</a>', __('J\'accepte les :condition ', 'ecosphair')) ?></span>
+									<span class="form__checklabel"><?= str_replace(':condition', '<a href="'. get_the_permalink(ecosphair_get_template_page('template-condition')) .'">' . __('conditions générales d\'utilisation', 'ecosphair') . '</a>', __('J\'accepte les :condition ', 'ecosphair')) ?></span>
 								</label>
 								<?= ecosphair_get_contact_field_error('rules'); ?>
 							</div>

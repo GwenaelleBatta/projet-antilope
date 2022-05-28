@@ -3,7 +3,7 @@
 		<section aria-labelledby="projet" class="layout__project projects">
 			<h2 id="projet" class=" projects__title" aria-level="2"><?= __('Modules', 'ecosphair') ?></h2>
 			<div class="projects__list">
-				<?php if (($modules = ecosphair_get_modules(10))->have_posts()):while ($modules->have_posts()): $modules->the_post(); ?>
+				<?php if (($modules = ecosphair_get_modules())->have_posts()):while ($modules->have_posts()): $modules->the_post(); ?>
 					<article aria-labelledby="singleModule" class="project">
 						<a href="<?= get_the_permalink() ?>"
 						   class="project__link"><?= __('Voir plus sur ', 'ecosphair') ?><?= get_the_title() ?></a>

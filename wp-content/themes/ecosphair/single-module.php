@@ -16,11 +16,11 @@
 			<div class="singleModule__questions">
 				<section aria-labelledby="why" class="singleModule__why">
 					<h3 id="why" class="singleModule__title" aria-level="3"><?= __('Pourquoi ?', 'ecosphair') ?></h3>
-					<p class="singleModule__content"><?= get_field('pourquoi') ?></p>
+					<p class="singleModule__paragraph"><?= get_field('pourquoi') ?></p>
 				</section>
 				<section aria-labelledby="who" class="singleModule__who">
 					<h3 id="who" class="singleModule__title" aria-level="3"><?= __('Pour qui ?', 'ecosphair') ?></h3>
-					<p class="singleModule__content"><?= get_field('qui') ?></p>
+					<p class="singleModule__paragraph"><?= get_field('qui') ?></p>
 				</section>
 			</div>
 			<div class="singleModule__picture">

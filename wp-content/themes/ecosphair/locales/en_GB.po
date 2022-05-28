@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Acacia\n"
-"POT-Creation-Date: 2022-05-26 15:06+0200\n"
-"PO-Revision-Date: 2022-05-27 18:39+0200\n"
+"POT-Creation-Date: 2022-05-28 11:47+0200\n"
+"PO-Revision-Date: 2022-05-28 11:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -15,6 +15,10 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: Forms/Validators/RequiredValidator.php:9
+msgid " Ce champ ne peut pas être vide."
+msgstr " This field can not be empty."
+
 #: archive-article.php:4
 msgid "Si vous voulez en savoir encore plus"
 msgstr "If you want to know more"
@@ -23,11 +27,11 @@ msgstr "If you want to know more"
 msgid "Quelques articles"
 msgstr "Some articles"
 
-#: archive-article.php:11 archive-article.php:33 index.php:36 index.php:85
+#: archive-article.php:11 archive-article.php:33 index.php:39 index.php:91
 msgid "Voir plus sur"
 msgstr "See more on"
 
-#: archive-article.php:23 index.php:99
+#: archive-article.php:23 index.php:105
 msgid "Il n'y a pas de nouveaux articles"
 msgstr "There are no new articles"
 
@@ -47,7 +51,7 @@ msgstr "Modules"
 msgid "Voir plus sur "
 msgstr "See more on "
 
-#: archive-module.php:31 index.php:54
+#: archive-module.php:31 index.php:57
 msgid "Il n'y a pas de nouveaux projets"
 msgstr "There are no new projects"
 
@@ -63,6 +67,10 @@ msgstr "You can also find us on"
 msgid "Mentions légales"
 msgstr "Legal notices"
 
+#: functions.php:328
+msgid "Ce champ ne respecte pas : "
+msgstr "This field doesn't respect : "
+
 #: header.php:22
 msgid "Navigation d'"
 msgstr "Navigation of"
@@ -71,7 +79,7 @@ msgstr "Navigation of"
 msgid ", la vie telle que nous la connaissons sur terre"
 msgstr ", life as we know it on earth"
 
-#: index.php:7 template-about.php:45
+#: index.php:7 template-about.php:48
 msgid "Contacter"
 msgstr "Contact"
 
@@ -80,8 +88,8 @@ msgid "En quoi "
 msgstr "How "
 
 #: index.php:15
-msgid " peut-elle vous aider ?"
-msgstr "can help you ?"
+msgid " peut vous aider ?"
+msgstr " can help you ?"
 
 #: index.php:16
 msgid ""
@@ -107,27 +115,27 @@ msgstr ""
 "nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid "
 "ex ea commodi consequatur?"
 
-#: index.php:19 index.php:66
+#: index.php:19 index.php:69
 msgid "En savoir plus"
 msgstr "Read more"
 
-#: index.php:26
+#: index.php:29
 msgid "Quelles sont les solutions proposées ? "
 msgstr "What are the proposed solutions ? "
 
-#: index.php:28
+#: index.php:31
 msgid "Voir tous les modules"
 msgstr "See all modules"
 
-#: index.php:59
+#: index.php:62
 msgid "Avec qui ?"
 msgstr "Who with?"
 
-#: index.php:76
+#: index.php:82
 msgid "Quelques articles sur nous"
 msgstr "Some articles about us"
 
-#: index.php:78
+#: index.php:84
 msgid "Voir tous les articles"
 msgstr "See all articles"
 
@@ -151,55 +159,55 @@ msgstr "See all modules "
 msgid "Historique"
 msgstr "History"
 
-#: template-about.php:39
+#: template-about.php:42
 msgid "Avec Qui ?"
 msgstr "Who with?"
 
-#: template-contact.php:14
+#: template-contact.php:17
 msgid "Nos coordonnées"
 msgstr "Our contact details"
 
-#: template-contact.php:36
+#: template-contact.php:39
 msgid "Oups ! Il y a des erreurs dans le formulaire"
 msgstr "Oops! There are errors in the form"
 
-#: template-contact.php:39
+#: template-contact.php:42
 msgid "À qui"
 msgstr "Who"
 
-#: template-contact.php:49
+#: template-contact.php:52
 msgid "Nom"
 msgstr "Name"
 
-#: template-contact.php:56
+#: template-contact.php:59
 msgid "Prénom"
 msgstr "First name"
 
-#: template-contact.php:62 template-legale.php:16
+#: template-contact.php:65 template-legale.php:16
 msgid "E-mail"
 msgstr "E-mail"
 
-#: template-contact.php:68
+#: template-contact.php:71
 msgid "Objet"
 msgstr "Object"
 
-#: template-contact.php:75
+#: template-contact.php:78
 msgid "Message"
 msgstr "Message"
 
-#: template-contact.php:83
+#: template-contact.php:86
 msgid "conditions générales d'utilisation"
 msgstr "terms and conditions of use"
 
-#: template-contact.php:83
+#: template-contact.php:86
 msgid "J'accepte les :condition "
 msgstr "I accept the :condition "
 
-#: template-contact.php:90
+#: template-contact.php:93
 msgid "Envoyer"
 msgstr "Send"
 
-#: template-contact.php:95
+#: template-contact.php:97
 msgid "Merci ! Votre message a bien été envoyé."
 msgstr "Thank you! Your message has been sent."
 
