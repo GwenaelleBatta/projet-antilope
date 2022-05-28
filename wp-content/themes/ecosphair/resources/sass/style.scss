@@ -1088,10 +1088,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   height: 100%;
 }
 //-------------------------100
-//#contact{
-//  color: #000000;
-//  font-size: 1.2em; /*18/15*/
-//}
+
 .actor .actor__article:nth-child(even) .actor__circle:nth-of-type(1), .who .who__article:nth-child(even) .actor__circle:nth-of-type(1) {
   width: 6.5625em; /*105/16*/
   height: 6.5625em; /*105/16*/
@@ -1135,5 +1132,74 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 
 //------------------------------
 
+/*----------Media queries-------------*/
+@media (max-width: 480px) {
+  //-----------------------------1
+  body{
+    background-color: pink;
+    font-size: 1.0625em; /*17/16*/
+  }
+  //------------------10
+  .header__nav{
+    margin-bottom: 0em;
+  }
+  .intro{
+    display: block;
+    background: linear-gradient(
+                    rgba(255, 255, 255, 0.6),
+                    rgba(255, 255, 255, 0.6)
+    ),
+    url("../../img/pexels-artem-beliaikin-929273.jpg"), no-repeat;
+    background-size: cover;
+    padding-bottom: 5.882352941176471em; /*100/17*/
+    margin-bottom: 5.882352941176471em; /*100/17*/
+    //position: relative;
+  }
+  .intro__title{
+    font-size: 1.470588235294118em; /*25/17*/
+    margin-top: 4em; /*100/25*/
+  }
+  .intro__position{
+    padding: 0em 2.941176470588235em; /*50/17*/
+    margin-right: 0;
+  }
+  .layout__help{
+    display: block;
+    padding: 0em 2.176470588235294em; /*37/17*/
+  }
+  .help__text{
+    margin-bottom: 3.529411764705882em; /*60/17*/
+  }
 
+  //----------------------------30
+  .help__figure, .intro__figure, .actor__figure{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+  .intro__links, .help__links, .actor__link{
+    font-size: 0.6470588235294118em; /*11/17*/
+
+  }
+  //-------------------------------------77
+  h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title, h2.confident__title, h2.coordinate__title{
+    font-size: 1.176470588235294em; /*20/17*/
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  body{
+    background-color: cadetblue;
+  }
+}
+@media (min-width: 769px) {
+  body{
+    background-color: palegreen;
+  }
+}
 
