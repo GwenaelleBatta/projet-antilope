@@ -30,6 +30,13 @@ main section {
 }
 
 //-------------------------10
+
+.singleModule__nav {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
 .form__error{
   color: #CC6666;
 }
@@ -489,7 +496,14 @@ main section {
 .coordinates section, .coordinates p {
   margin-bottom: 20px;
 }
-
+.singleModule__nav a {
+  color: #5ABFBF;
+  text-transform: uppercase;
+  font-size: 0.9375em; /*15/16*/
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.6666666666666667em; /*10/15*/
+}
 .help__figure img {
   border-radius: 100%;
   position: relative;
@@ -791,7 +805,7 @@ article.project .project__fig {
 
 //-------------------------30
 
-.modules__links, .articles__links, .singleModule__links {
+.modules__links, .articles__links, .singleModule__links{
   position: absolute;
   right: 0;
   top: 0;
@@ -1220,7 +1234,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 @media (max-width: 480px) {
   //-----------------------------1
   body {
-    font-size: 1.0625em; /*17/16*/
+    font-size: 15px; /*17/16*/
   }
   //------------------2
   main section {
@@ -1257,7 +1271,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     padding: 0em 2.941176470588235em; /*50/17*/
     margin-right: 0;
   }
-  .layout__help, .layout__module, .layout__article, .layout__project, .singleModule{
+  .layout__help, .layout__module, .layout__article, .layout__project, .singleModule, .layout__contact, .layout__article, .about{
     display: block;
     padding: 0em 2.176470588235294em; /*37/17*/
   }
@@ -1266,6 +1280,34 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   }
   .actor {
     padding: 0em 2.941176470588235em; /*50/17*/
+  }
+  .information{
+    margin-bottom: 3em;
+  }
+  .contact__title{
+    margin-bottom: 0em;
+    font-size: 25px;
+  }
+  .layout__contact{
+    margin-bottom: 0em;
+  }
+  h3.information__title{
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  .why__wysiwyg{
+    margin-right: 0em;
+  }
+  .about__title{
+    margin-bottom: 3.3333333333em;
+    margin-top: 5.3333333333em;
+    font-size: 1.666666666666667em;/*25/15*/
+  }
+  .about{
+    margin-bottom: 0em;
+  }
+  .why, .history{
+    margin-bottom: 100px;
   }
   //----------------------------20
   .project:nth-of-type(1) .project__cards{
@@ -1303,6 +1345,9 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   .project:nth-of-type(4){
     grid-row: 3;
   }
+  .singleModule{
+    margin-bottom: 7em;
+  }
   .singleModule__questions{
     flex-direction: column;
   }
@@ -1310,13 +1355,14 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     border-right: none;
     border-bottom: 2px solid #A0BF35;
     padding-right: 0em;
-    margin-bottom: 5.882352941176471em; /*100/17*/
+    margin-bottom: 3.6em; /*61.2/17*/
   }
   .singleModule__content{
     margin-top: 40px;
   }
   .singleModule__who{
     margin-left: 0em;
+    margin-bottom: 5em; /*85/17*/
   }
   .singleModule__intro{
     flex-direction: column;
@@ -1340,12 +1386,51 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   .singleModule__logo{
     outline-offset: 8px;
   }
+  .singleModule__picture{
+    flex-direction: column;
+    gap: 1em;
+  }
+  .singleModule__galerie:nth-of-type(2){
+    margin-top: 0em;
+  }
+  .singleModule__galerie{
+    margin-right: 1.875em;
+    margin-left: 1.875em;
+  }
+  .contact__position{
+    flex-direction: column;
+  }
+  .contact__content{
+    order: -2;
+    margin-left: 0em;
+  }
+  .projects__title, .articles h2.articles__title{
+    font-size: 1.666666666666667em; /*25/15*/
+  }
+  .article__list{
+    grid-template-columns: 1fr;
+  }
+  .form__label{
+    font-size: inherit;
+  }
+  .history__list{
+    display: block;
+  }
+  .article__history{
+    margin-bottom: 20px;
+  }
+  .articles h2.articles__title{
+    max-width: 250px;
+    margin-left: 75px;
+  }
   //----------------------------30
   .modules .module .article__module, .articles .article .article__article{
-    margin-right: 0em;
+    margin-right: 1.875em;
+    margin-left: 1.875em;
     margin-bottom: 1em;
+
   }
-  .help__figure, .intro__figure, .actor__figure{
+  .help__figure, .intro__figure, .actor__figure, .contact__figure, .why__figure{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1358,12 +1443,11 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     outline: none;
   }
 
-  .intro__links, .help__links, .actor__link {
-    font-size: 0.6470588235294118em; /*11/17*/
-
+  .intro__links, .help__links, .actor__link, .form__button {
+    font-size: 0.7333333333333333em; /*11/15*/
   }
 
-  .actor .actor__article .actor__figure, .who .who__article .who__figure {
+  .actor .actor__article .actor__figure, .who .who__article .who__figure, .history__svg {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1377,14 +1461,15 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   }
   .modules__links, .articles__links, .singleModule__links{
     position: relative;
+    font-size: 0.7333333333333333em; /*11/15*/
   }
     //-------------------------------------77
-  h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title, h2.confident__title, h2.coordinate__title {
-    font-size: 1.176470588235294em; /*20/17*/
+  h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title, h2.confident__title, h2.coordinate__title,  h3.information__title, .why__title, .history__title, .who__title{
+    font-size: 1.333333333333333em; /*20/15*/
   }
 
-  h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article__title, h3.video__title, h4.video__title {
-    font-size: 1.058823529411765em; /*18/17*/
+  h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article__title, h3.video__title, h4.video__title, h3.project__title, h4.information__title, h5.information__who, h4.who__title {
+    font-size: 1.133333333333333em; /*17/15*/
   }
 
 }

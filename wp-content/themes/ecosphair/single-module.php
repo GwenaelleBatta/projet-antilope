@@ -43,6 +43,22 @@
 					</figure>
 				</div>
 			</div>
+			<div class="singleModule__nav">
+				<?php if( get_adjacent_post(false, '', false) ) {
+					next_post_link('%link', ' %title');
+				} else {
+					$last = new WP_Query('post_type=module&posts_per_page=1&order=ASC'); $last->the_post();
+					echo '<a  href="' . get_permalink() . '">' . get_the_title() .'</a>';
+					wp_reset_query();
+				};  ?>
+				<?php if( get_adjacent_post(false, '', true) ) {
+					previous_post_link('%link', '%title ');
+				} else {
+					$first = new WP_Query('post_type=module&posts_per_page=1&order=DESC'); $first->the_post();
+					echo '<a  href="' . get_permalink() . '">' . get_the_title() .'</a>';
+					wp_reset_query();
+				}; ?>
+			</div>
 		</section>
 	</main>
 <?php endwhile; ?>
