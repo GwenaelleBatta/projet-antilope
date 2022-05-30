@@ -1,4 +1,3 @@
-<? php ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,23 +19,41 @@
 	<p class="header__placeholder hidden"><?= get_bloginfo('description'); ?></p>
 	<nav aria-labelledby="navigation" class="header__nav">
 		<h2 id="navigation" class="nav__title hidden" aria-level="2"><?= __('Navigation d\'', 'ecosphair') ?> <?= get_bloginfo('name') ?></h2>
-		<ul class="nav__liste">
-			<?php foreach (ecosphair_get_menu_items('primary') as $link): ?>
-				<li class="<?= $link->getBemClasses('nav__item'); ?>">
-					<a href="<?= $link->url; ?>"
-							<?= $link->title ? 'title = "' . $link->title . '"' : ''; ?>
-					   class="nav__link"><?= $link->label; ?></a>
-				</li>
-			<?php endforeach; ?>
-			<ul class="languages">
-				<?php foreach (pll_the_languages(['raw' => true]) as $code => $locale):; ?>
-					<li class="nav__languages">
-						<a href="<?= $locale['url']; ?>" class="nav__locale <?= $locale['current_lang']?' nav__locale--current':''?>" lang="<?= $locale['locale']; ?>"
-						   hreflang="<?= $locale['locale'] ?>" title="<?= $locale['name']; ?>"><?= $code ?></a>
+		<div class="nav__logo logo">
+			<a href="<?= home_url() ?>" class="logo__link"> <?= __('Accueil', 'ecosphair')?></a>
+		</div>
+			<label class="hidden" for="burger">
+				Checkbox Burger Menu
+			</label>
+			<input id="burger" name="burger" type="checkbox" class="nav__checkbox">
+			<div class="nav__burger burger">
+				<span class="burger__line line1"></span>
+				<span class="burger__line line2"></span>
+				<span class="burger__line line3"></span>
+			</div>
+
+		<div class="nav__position">
+			<ul class="nav__liste">
+				<?php foreach (ecosphair_get_menu_items('primary') as $link): ?>
+					<li class="<?= $link->getBemClasses('nav__item'); ?>">
+						<a href="<?= $link->url; ?>"
+								<?= $link->title ? 'title = "' . $link->title . '"' : ''; ?>
+						   class="nav__link"><?= $link->label; ?></a>
 					</li>
 				<?php endforeach; ?>
-			</>
-		</ul>
+				<ul class="languages">
+					<?php foreach (pll_the_languages(['raw' => true]) as $code => $locale):; ?>
+						<li class="nav__languages">
+							<a href="<?= $locale['url']; ?>"
+							   class="nav__locale <?= $locale['current_lang'] ? ' nav__locale--current' : '' ?>"
+							   lang="<?= $locale['locale']; ?>"
+							   hreflang="<?= $locale['locale'] ?>" title="<?= $locale['name']; ?>"><?= $code ?></a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</ul>
+		</div>
+
 	</nav>
 </header>
 

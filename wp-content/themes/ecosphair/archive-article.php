@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-	<main>
-		<section aria-labelledby="learn more" class="layout__article articles">
+	<main class="layout__article">
+		<section aria-labelledby="learn more" class="layout__articles articles">
 			<h2 id="learn more" class="articles__title" aria-level="2"><?= __('Si vous voulez en savoir encore plus', 'ecosphair') ?></h2>
 			<section aria-labelledby="articles" class="articles__article articles">
 				<h3 id="articles"  class="article__title" aria-level="3"><?= __('Quelques articles', 'ecosphair') ?></h3>
