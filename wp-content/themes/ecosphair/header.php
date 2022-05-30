@@ -6,6 +6,7 @@
 		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" >
 	<meta name="author" content="Batta Gwenaëlle">
 	<meta name="description" content="Projet Client">
+	<meta name="keywords" content="pollution, air, mesure, écologie, antilope, oryx, saiga, madoqua, impala, nyala, HEPL, ISSep">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><?= wp_title('-', false, 'right') . get_bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?= ecosphair_mix('css/style.css'); ?>">
