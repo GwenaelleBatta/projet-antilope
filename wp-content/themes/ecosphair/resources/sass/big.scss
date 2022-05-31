@@ -1,4 +1,7 @@
 @media (min-width: 1710px) {
+  body {
+    font-size: 20px;
+  }
   .confident__text{
     max-width: 40em;
   }
@@ -16,9 +19,7 @@
     white-space: nowrap; /* added line */
     border: 0;
   }
-  body {
-    font-size: 20px;
-  }
+
 
   .nav__checkbox, .burger { /*20*/
     border: 0;
@@ -52,9 +53,6 @@
   }
   .singleModule__picture {
     justify-content: center;
-  }
-  .singleModule__galerie {
-    max-width: 325px;
   }
   article.article__module, article.article__article, article.video {
     margin-right: 5.5em;
