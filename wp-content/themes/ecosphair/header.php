@@ -43,16 +43,16 @@
 						   class="nav__link"><?= $link->label; ?></a>
 					</li>
 				<?php endforeach; ?>
-				<ul class="languages">
-					<?php foreach (pll_the_languages(['raw' => true]) as $code => $locale):; ?>
-						<li class="nav__languages">
-							<a href="<?= $locale['url']; ?>"
-							   class="nav__locale <?= $locale['current_lang'] ? ' nav__locale--current' : '' ?>"
-							   lang="<?= $locale['locale']; ?>"
-							   hreflang="<?= $locale['locale'] ?>" title="<?= $locale['name']; ?>"><?= $code ?></a>
-						</li>
-					<?php endforeach; ?>
-				</ul>
+			</ul>
+			<ul class="languages">
+				<?php foreach (pll_the_languages(['raw' => true]) as $code => $locale):; ?>
+					<li class="nav__languages">
+						<a href="<?= $locale['url']; ?>"
+						   class="nav__locale <?= $locale['current_lang'] ? ' nav__locale--current' : '' ?>"
+						   lang="<?= $locale['locale']; ?>"
+						   hreflang="<?= $locale['locale'] ?>" title="<?= $locale['name']; ?>"><?= $code ?></a>
+					</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 	</nav>

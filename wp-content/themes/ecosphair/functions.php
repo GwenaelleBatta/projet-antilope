@@ -299,33 +299,32 @@ function ecosphair_get_template_page(string $template){
     ]);
     return $query->posts[0] ?? null;
 }
+// Gérer l'envoi de formulaire personnalisé
 add_action('admin_post_submit_contact_form', 'ecosphair_handle_submit_contact_form');
-function ecosphair_handle_submit_contact_form()
-{
-    //Instancier le controller du form
+
+function ecosphair_handle_submit_contact_form() {
+    // Instancier le controlleur du formulaire
     $form = new ContactFormController($_POST);
 }
-function ecosphair_get_contact_field_value($field)
-{
-    if (!isset($_SESSION['contact_form_feedback'])) {
+
+function ecosphair_get_contact_field_value($field) {
+    if ( ! isset($_SESSION['contact_form_feedback'])) {
         return '';
     }
 
     return $_SESSION['contact_form_feedback']['data'][$field] ?? '';
 }
 
-function ecosphair_get_contact_field_error($field)
-{
-
-    if (!isset($_SESSION['contact_form_feedback'])) {
+function ecosphair_get_contact_field_error($field) {
+    if ( ! isset($_SESSION['contact_form_feedback'])) {
         return '';
     }
 
-    if (!($_SESSION['contact_form_feedback']['errors'][$field] ?? null)) {
+    if ( ! ($_SESSION['contact_form_feedback']['errors'][$field] ?? null)) {
         return '';
     }
 
-    return '<p class="form__error">' . __("Ce champ ne respecte pas : ", "ecosphair") . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
+    return '<p class="form__error">' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
 }
 function ecosphair_mix($path)
 {

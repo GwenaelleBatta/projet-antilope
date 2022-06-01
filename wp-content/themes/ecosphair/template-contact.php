@@ -17,8 +17,8 @@
 						<h3 id="info" class="information__title" aria-level="3"><?= __('Nos coordonnées', 'ecosphair') ?></h3>
 						<div class="information__position">
 							<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-								<article aria-labelledby="partner" class="information__article">
-									<h4 id="partner" class="information__title" aria-level="4"><?= get_the_title() ?></h4>
+								<article aria-labelledby="<?= get_post_field('post_name') ?>" class="information__article">
+									<h4 id="<?= get_post_field('post_name') ?>" class="information__title" aria-level="4"><?= get_the_title() ?></h4>
 									<section aria-labelledby="infoContact" class="information__contact">
 										<h5 id="infoContact" class="information__who" aria-level="5" ><?= get_field('nom') ?></h5>
 										<p class="information__where"><?= get_field('lieu') ?></p>

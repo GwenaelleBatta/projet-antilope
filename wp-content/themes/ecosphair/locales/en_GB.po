@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Acacia\n"
-"POT-Creation-Date: 2022-05-28 11:47+0200\n"
-"PO-Revision-Date: 2022-05-28 11:48+0200\n"
+"POT-Creation-Date: 2022-06-01 09:04+0200\n"
+"PO-Revision-Date: 2022-06-01 09:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -14,6 +14,18 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Page non trouvée"
+msgstr "Page not found"
+
+#: 404.php:12
+msgid "l’accueil"
+msgstr "home"
+
+#: 404.php:12
+msgid "Retourner à :accueil"
+msgstr "Come back to :accueil"
 
 #: Forms/Validators/RequiredValidator.php:9
 msgid " Ce champ ne peut pas être vide."
@@ -55,15 +67,15 @@ msgstr "See more on "
 msgid "Il n'y a pas de nouveaux projets"
 msgstr "There are no new projects"
 
-#: footer.php:6
+#: footer.php:3
 msgid "Pied de la page d'"
 msgstr "Footer of the"
 
-#: footer.php:7
+#: footer.php:4
 msgid "Retrouvez nous aussi sur"
 msgstr "You can also find us on"
 
-#: footer.php:19
+#: footer.php:16
 msgid "Mentions légales"
 msgstr "Legal notices"
 
@@ -71,9 +83,13 @@ msgstr "Legal notices"
 msgid "Ce champ ne respecte pas : "
 msgstr "This field doesn't respect : "
 
-#: header.php:22
+#: header.php:24
 msgid "Navigation d'"
 msgstr "Navigation of"
+
+#: header.php:26
+msgid "Accueil"
+msgstr "Home"
 
 #: index.php:5
 msgid ", la vie telle que nous la connaissons sur terre"
@@ -162,6 +178,14 @@ msgstr "History"
 #: template-about.php:42
 msgid "Avec Qui ?"
 msgstr "Who with?"
+
+#: template-condition.php:12
+msgid "Dispositions générales"
+msgstr "General provisions"
+
+#: template-condition.php:15
+msgid "Modalités "
+msgstr "Modalities "
 
 #: template-contact.php:17
 msgid "Nos coordonnées"

@@ -31,7 +31,7 @@
 		   class="modules__links"> <?= __('Voir tous les modules', 'ecosphair') ?></a>
 		<div class="modules__module module">
 			<?php if (($modules = ecosphair_get_modules(3))->have_posts()):while ($modules->have_posts()): $modules->the_post(); ?>
-				<article aria-labelledby="listModule" class="article__module">
+				<article aria-labelledby="<?= get_post_field('post_name') ?>" class="article__module">
 					<div class="module__position">
 						<div class="module__cards">
 							<div class="module__links">
@@ -39,7 +39,7 @@
 								   class="module__link"><?= __('Voir plus sur', 'ecosphair') ?> <?= get_the_title() ?></a>
 							</div>
 							<header class="module__head">
-								<h3 id="listModule" class="module__title" aria-level="3"><?= get_the_title() ?></h3>
+								<h3 id="<?= get_post_field('post_name') ?>"  class="module__title" aria-level="3"><?= get_the_title() ?></h3>
 							</header>
 							<figure class="module__fig">
 								<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'modules__thumb']); ?>
@@ -61,9 +61,9 @@
 	<section aria-labelledby="actors" class="layout__who actor">
 		<h2 id="actors" class="actor__title" aria-level="2"> <?= __('Avec qui ?', 'ecosphair') ?></h2>
 		<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-			<article aria-labelledby="actor" class="actor__article">
+			<article  class="<?= get_post_field('post_name') ?>">
 				<div class="actor__text">
-					<h3 id="actor" class="actor__title" aria-level="3"><?= get_the_title() ?></h3>
+					<h3  class="<?= get_post_field('post_name') ?>" aria-level="3"><?= get_the_title() ?></h3>
 					<p class="actor__text"><?= get_field('excerpt') ?></p>
 					<a href="<?= get_the_permalink(ecosphair_get_template_page('template-about')) ?>"
 					   class="actor__link"><?= __('En savoir plus', 'ecosphair') ?></a>
@@ -84,7 +84,7 @@
 		   class="articles__links"><?= __('Voir tous les articles', 'ecosphair') ?></a>
 		<div class="articles__article article">
 			<?php if (($articles = ecosphair_get_articles(3))->have_posts()):while ($articles->have_posts()): $articles->the_post(); ?>
-				<article aria-labelledby="article" class="article__article">
+				<article aria-labelledby="<?= get_post_field('post_name') ?>" class="article__article">
 					<div class="article__position">
 						<div class="article__links">
 							<a href="<?= get_field('article') ?>"
@@ -92,7 +92,7 @@
 						</div>
 						<div class="article__cards">
 							<header class="article__head">
-								<h3 id="article" class="article__title" aria-level="3"><?= get_the_title() ?></h3>
+								<h3 id="<?= get_post_field('post_name') ?>" class="article__title" aria-level="3"><?= get_the_title() ?></h3>
 							</header>
 							<figure class="article__fig">
 								<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'article__thumb']); ?>

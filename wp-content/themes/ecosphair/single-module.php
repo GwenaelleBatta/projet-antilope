@@ -6,9 +6,9 @@
 				<div class="singleModule__content">
 					<h2 id="module" class="singleModule__title" aria-level="2"><?= get_the_title() ?></h2>
 					<?php the_content(); ?>
-				</div>
 				<a href="<?= get_post_type_archive_link('module'); ?>"
 				   class="singleModule__links"> <?= __('Autres modules', 'ecosphair') ?></a>
+				</div>
 				<figure class="singleModule__fig">
 					<?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'singleModule__logo']); ?>
 				</figure>

@@ -22,10 +22,10 @@
 				</svg>
 				<article class="history__list">
 					<?php if (($history = ecosphair_get_history())->have_posts()):while ($history->have_posts()): $history->the_post(); ?>
-						<article class="article__history">
+						<article class="<?= get_post_field('post_name') ?>">
 							<div class="history__cards">
 								<header class="history__head">
-									<h4 class="history__title"><?= get_the_title() ?></h4>
+									<h4 class="<?= get_post_field('post_name') ?>"><?= get_the_title() ?></h4>
 								</header>
 								<div class="history__excerpt">
 									<p>
@@ -41,9 +41,9 @@
 			<section class="about__section who">
 				<h3 class="who__title"><?=__('Avec Qui ?', 'ecosphair')?></h3>
 				<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-					<article class="who__article">
+					<article aria-labelledby="<?= get_post_field('post_name') ?>" class="who__article">
 						<div class="who__text">
-							<h4 class="who__title"><?= get_the_title() ?></h4>
+							<h4 id="<?= get_post_field('post_name') ?>" class="who__title"><?= get_the_title() ?></h4>
 							<p class="who__text"><?=get_the_content() ?></p>
 							<a class="who__link" href="<?= get_the_permalink(ecosphair_get_template_page('template-contact')) ?>"><?= __('Contacter', 'ecosphair') ?></a>
 						</div>
