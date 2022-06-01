@@ -530,6 +530,42 @@ main section {
 .module__fig {
   order: -1;
 }
+.error404__title{
+  color: #01595A;
+  font-size: 2.1875em; /*35/16*/
+  font-weight: 900;
+  max-width: 15.71428571428571em; /*550/35*/
+  line-height: 1.142857142857143em; /*40/35*/
+  text-transform: uppercase;
+  margin-top: 8em;
+  align-self: center;
+
+}
+.error404__position{
+  display: flex;
+  flex-direction: column;
+}
+.error404__subtitle{
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.error404__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.error404__content{
+  font-size: 1.2em;
+}
+.error404__link{
+  color: #5ABFBF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.6666666666666667em; /*10/15*/
+}
 //-------------------------11
 
 .nav__item a {
@@ -680,6 +716,8 @@ textarea.form__input {
 
 .nav__item:nth-of-type(2) {
   flex: 1;
+  justify-content: end;
+  margin-right: 2.2em;
 }
 
 .nav__item, .languages {
@@ -688,10 +726,12 @@ textarea.form__input {
   padding: 0.4em; /*6/15*/
   justify-self: end;
   align-self: center;
-  display: inline-block;
+  display: flex;
 
 }
-
+.nav__languages:first-child{
+  margin-right: 0.2em;
+}
 .videos, .articles {
   margin-left: 3.125em; /*50/16*/
   margin-bottom: 11.25em; /*180px/16*/
@@ -1293,6 +1333,9 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 
   .about {
     margin-bottom: 0;
+  }
+  .error404__title{
+    margin-top: 6.5em;
   }
   .nav__logo {
     display: block;
