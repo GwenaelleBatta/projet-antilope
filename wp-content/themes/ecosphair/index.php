@@ -25,8 +25,8 @@
 			<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'help__thumb']); ?>
 		</figure>
 	</section>
-	<section aria-labelledby="modules" class="layout__module modules">
-		<h2 id="modules" class="modules__title" aria-level="2"><?= __('Quelles sont les solutions proposées ? ', 'ecosphair') ?></h2>
+	<section aria-labelledby="modules" class="layout__module modules ">
+		<h2 id="modules" class="modules__title fade-in" aria-level="2"><?= __('Quelles sont les solutions proposées ? ', 'ecosphair') ?></h2>
 		<a href="<?= get_post_type_archive_link('module'); ?>"
 		   class="modules__links"> <?= __('Voir tous les modules', 'ecosphair') ?></a>
 		<div class="modules__module module">

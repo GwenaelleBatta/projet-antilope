@@ -1,6 +1,17 @@
 @import 'reset';
 @import url("https://use.typekit.net/tqs7xtc.css");
-
+a {
+  transition: ease-in-out .5s;
+}
+.fade {
+  transition: ease-in-out .5s;
+  opacity: 0;
+  transform: translateY(2em);
+}
+.inview {
+  opacity: 1;
+  transform: none;
+}
 //---------------------1
 *::selection {
   background-color: #AEE6F2;
@@ -1326,7 +1337,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     height: 102vh;
     position: fixed;
     background-color: #AEE6F2;
-    top: -100%;
+    top: -200%;
     z-index: -1;
     transition: all 0.3s ease-in-out;
   }
@@ -1347,7 +1358,6 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 
     //position: relative;
   }
-
   .intro__title {
     font-size: 1.470588235294118em; /*25/17*/
     margin-top: 8em; /*100/25*/
@@ -1363,7 +1373,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
 
   .about__title {
     margin-bottom: 3.3333333333em;
-    margin-top: 5.3333333333em;
+    margin-top: 3em;
     font-size: 1.666666666666667em; /*25/15*/
   }
 
@@ -1478,6 +1488,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     padding: 0;
   }
 
+
   .footer__body {
     flex-direction: column;
     align-items: flex-start;
@@ -1521,6 +1532,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 80px;
+    margin-top: 3em;
   }
 
   .singleModule__links {
@@ -1583,11 +1595,21 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     margin-left: 0;
     margin-top: 4em;
   }
+  .project__image{
+    min-width: 190px;
+  }
+  div.video__list{
+    grid-gap: 0em;
+    grid-template-columns: 1fr;
+  }
   .form__button {
     margin-bottom: 14em;
   }
   .singleModule__nav {
     margin-bottom: 2em;
+  }
+  .singleModule__links{
+    font-size: 0.7333333333333333em; /*11/15*/
   }
   //-----------------------------11
   h3.information__title {
@@ -1620,6 +1642,15 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     min-width: 0;
   }
 
+  article.article__module .module__position, article.article__article .article__cards, article.video .video__cards{
+    min-height: 400px;
+    max-width: 225px;
+
+  }
+  .article__article{
+    max-width: 265px;
+
+  }
   .legales__section, .conditions__section {
     border-bottom: 2px solid #A0BF35;
     border-right: none;
@@ -1655,6 +1686,10 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   .singleModule__galerie:nth-of-type(2) {
     margin-top: 0;
   }
+  .modules__links, .articles__links  {
+    position: relative;
+    font-size: 0.7333333333333333em; /*11/15*/
+  }
   //-----------------------------21
   .nav__item a, .languages a {
     font-size: 20px;
@@ -1678,11 +1713,9 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   }
   .article__list, .videos .video__list {
     margin-top: 2.5em;
+    justify-items: center;
   }
-  .modules__links, .articles__links, .singleModule__links {
-    position: relative;
-    font-size: 0.7333333333333333em; /*11/15*/
-  }
+
   //-----------------------------33
   article.article__module, article.article__article, article.video {
     top: 0;
@@ -1722,6 +1755,10 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     margin-right: 1.875em;
     margin-left: 1.875em;
     margin-bottom: 1em;
+  }
+  //---------------------63
+  .projects__title, .contact__title, .articles h2.articles__title, h2.legales__title, h2.conditions__title {
+    margin-top: 3em;
   }
   //------------------70
   .actor .actor__article .actor__figure, .who .who__article .who__figure, .history__svg {
@@ -1841,6 +1878,9 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     gap: 20px;
     flex: initial;
   }
+  .video__list{
+    grid-template-columns: auto;
+  }
   .nav__liste {
     margin-top: 20%;
     flex-direction: column;
@@ -1867,7 +1907,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     left: 0;
     position: fixed;
     background-color: #AEE6F2;
-    top: -100%;
+    top: -200%;
     z-index: -1;
     transition: all 0.3s ease-in-out;
   }
@@ -1929,6 +1969,9 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     margin-top: 5.3333333333em;
     font-size: 1.666666666666667em; /*25/15*/
   }
+  .singleModule__nav{
+    margin-bottom: 8em;
+  }
   .about {
     margin-bottom: 0;
     display: block;
@@ -1959,6 +2002,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
     margin-bottom: 5.333333333333333em; /*80/15*/
   }
   .singleModule__links {
+    font-size: 0.73333333333em;
     order: -2;
     align-self: flex-end;
   }
@@ -2097,7 +2141,7 @@ h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article
   .article__list, .videos .video__list {
     margin-top: 2.5em;
   }
-  .modules__links, .articles__links, .singleModule__links {
+  .modules__links, .articles__links {
     position: relative;
     font-size: 0.7333333333333333em; /*11/15*/
   }
