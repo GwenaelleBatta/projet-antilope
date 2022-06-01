@@ -2,11 +2,11 @@
 <?php get_header(); ?>
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 	<main class="layout__about">
-		<section class="about">
-			<h2 class="about__title"><?= get_the_title() ?></h2>
-			<section class="about__section why">
+		<section aria-labelledby="about" class="about">
+			<h2 id="about" class="about__title" aria-level="2"><?= get_the_title() ?></h2>
+			<section aria-labelledby="why" class="about__section why">
 				<div class="why__position">
-					<h3 class="why__title"><?= __('Pourquoi ?', 'ecosphair') ?></h3>
+					<h3 id="why" class="why__title" aria-level="3"><?= __('Pourquoi ?', 'ecosphair') ?></h3>
 					<div class="why__wysiwyg">
 						<?= get_field('pourquoi') ?>
 					</div>
@@ -15,17 +15,17 @@
 					<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'why__thumb']); ?>
 				</figure>
 			</section>
-			<section class="about__section history">
-				<h3 class="history__title"><?= __('Historique', 'ecosphair') ?></h3>
+			<section aria-labelledby="history" class="about__section history">
+				<h3 id="history" class="history__title" aria-level="3"><?= __('Historique', 'ecosphair') ?></h3>
 				<svg viewBox="0 0 50% 50%" xmlns="http://www.w3.org/2000/svg" class="history__svg">
 					<line x1="20" y1="0" x2="20" y2="1200"  class="history__line"/>
 				</svg>
 				<article class="history__list">
 					<?php if (($history = ecosphair_get_history())->have_posts()):while ($history->have_posts()): $history->the_post(); ?>
-						<article class="<?= get_post_field('post_name') ?>">
+						<article aria-labelledby="<?=get_post_field('post__name')?>" class="article__history">
 							<div class="history__cards">
 								<header class="history__head">
-									<h4 class="<?= get_post_field('post_name') ?>"><?= get_the_title() ?></h4>
+									<h4 id="<?=get_post_field('post__name')?> " aria-level="4" class="history__title"><?= get_the_title() ?></h4>
 								</header>
 								<div class="history__excerpt">
 									<p>
@@ -38,12 +38,12 @@
 					<?php endif; ?>
 				</article>
 			</section>
-			<section class="about__section who">
-				<h3 class="who__title"><?=__('Avec Qui ?', 'ecosphair')?></h3>
+			<section aria-labelledby="who" class="about__section who">
+				<h3 id="who" class="who__title" aria-level="3"><?=__('Avec Qui ?', 'ecosphair')?></h3>
 				<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-					<article aria-labelledby="<?= get_post_field('post_name') ?>" class="who__article">
+					<article aria-labelledby="<?=get_post_field('post__name')?>" class="who__article">
 						<div class="who__text">
-							<h4 id="<?= get_post_field('post_name') ?>" class="who__title"><?= get_the_title() ?></h4>
+							<h4 id="<?=get_post_field('post__name')?>" class="who__title" aria-level="4"><?= get_the_title() ?></h4>
 							<p class="who__text"><?=get_the_content() ?></p>
 							<a class="who__link" href="<?= get_the_permalink(ecosphair_get_template_page('template-contact')) ?>"><?= __('Contacter', 'ecosphair') ?></a>
 						</div>

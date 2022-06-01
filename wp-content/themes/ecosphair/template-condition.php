@@ -11,8 +11,8 @@
 					<h2 id="coordinates" class="coordinate__title"
 						aria-level="2"><?= __('Dispositions générales', 'ecosphair') ?></h2>
 				</section>
-				<section class="confident">
-					<h2 class="confident__title"><?= __('Modalités ', 'ecosphair') ?></h2>
+				<section aria-labelledby="confident" class="confident">
+					<h2 id="confident" class="confident__title" aria-level="2"><?= __('Modalités ', 'ecosphair') ?></h2>
 					<p class="confident__text">
 						<?= get_the_content() ?>
 					</p>

@@ -19,8 +19,8 @@
 							<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
 								<article aria-labelledby="<?= get_post_field('post_name') ?>" class="information__article">
 									<h4 id="<?= get_post_field('post_name') ?>" class="information__title" aria-level="4"><?= get_the_title() ?></h4>
-									<section aria-labelledby="infoContact" class="information__contact">
-										<h5 id="infoContact" class="information__who" aria-level="5" ><?= get_field('nom') ?></h5>
+									<section aria-labelledby="<?= get_post_field('post_name') ?>_info" class="information__contact">
+										<h5 id="<?= get_post_field('post_name') ?>_info" class="information__who" aria-level="5" ><?= get_field('nom') ?></h5>
 										<p class="information__where"><?= get_field('lieu') ?></p>
 										<p class="information__mail"><?= get_field('email') ?></p>
 										<p class="information__phone"><?= get_field('telephone') ?></p>
@@ -33,8 +33,7 @@
 				<div class="contact__forms">
 					<?php if (!isset($_SESSION['contact_form_feedback']) || !$_SESSION['contact_form_feedback']['success']) : ?>
 						<form action="<?= substr(get_home_url(), 0,-2); ?>wp-admin/admin-post.php" method="POST"
-							  class="contact__form form"
-							  id="contact">
+							  class="contact__form form">
 							<?php if (isset($_SESSION['contact_form_feedback'])) : ?>
 								<p class="form__error"><?= __('Oups ! Il y a des erreurs dans le formulaire', 'ecosphair') ?></p>
 							<?php endif; ?>

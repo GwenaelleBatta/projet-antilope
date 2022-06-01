@@ -35,8 +35,8 @@
 						</section>
 					</section>
 				</section>
-				<section class="confident">
-					<h2 class="confident__title"><?= __('Clauses de confidentialité', 'ecosphair') ?></h2>
+				<section aria-labelledby="confidentiality" class="confident">
+					<h2 id="confidentiality" class="confident__title"><?= __('Clauses de confidentialité', 'ecosphair') ?></h2>
 					<p class="confident__text">
 						<?= get_the_content() ?>
 					</p>
