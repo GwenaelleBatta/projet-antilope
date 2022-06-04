@@ -10,17 +10,17 @@
 				<section aria-labelledby="coordinates" class="legales__section">
 					<h2 id="coordinates" class="coordinate__title"
 						aria-level="2"><?= __('Coordonnées', 'ecosphair') ?></h2>
-					<section aria-labelledby="coordinate" class="coordinates">
+					<section aria-labelledby="coordinate" class="coordinates" itemscope itemtype="https://schema.org/Person">
 						<h3 id="coordinate" class="coordinates__title hidden" aria-level="3"><?=__('Mes coordonnées')?></h3>
 						<section aria-labelledby="mail" class="coordinates__mail">
 							<h4 id="mail" class="coordinates__title" aria-level="4"><?= __('E-mail', 'ecosphair') ?></h4>
-							<p class="coordinates__mail mail">
+							<p class="coordinates__mail mail"itemprop="email">
 								<a href="mailto:ecosphair@issep.com">ecosphair@issep.com</a>
 							</p>
 						</section>
 						<section aria-labelledby="phone" class="coordinates__phone">
 							<h4 id="phone" class="coordinates__title" aria-level="4"><?= __('Numéro de téléphone', 'ecosphair') ?></h4>
-							<p class="coordinates__mail phone">
+							<p class="coordinates__mail phone" itemprop="telephone">
 								+32 (0)4 229 82 68
 							</p>
 						</section>
@@ -33,7 +33,7 @@
 								4000 LIÈGE
 							</p>
 						</section>
-					</section>
+					</section  >
 				</section>
 				<section aria-labelledby="confidentiality" class="confident">
 					<h2 id="confidentiality" class="confident__title"><?= __('Clauses de confidentialité', 'ecosphair') ?></h2>

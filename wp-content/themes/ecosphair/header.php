@@ -10,9 +10,7 @@
 		  content="pollution, air, mesure, écologie, antilope, oryx, saiga, madoqua, impala, nyala, HEPL, ISSep">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><?= wp_title('-', false, 'right') . get_bloginfo('name'); ?></title>
-	<link rel="stylesheet" type="text/css" href="<?= ecosphair_mix('css/style.css'); ?>">
-	<link rel="stylesheet" href="https://use.typekit.net/tqs7xtc.css">
-	<script type="text/javascript" src="<?= ecosphair_mix('/js/script.js'); ?>"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="<?= ecosphair_mix('css/style.css'); ?>">
 	<?php wp_head(); ?>
 </head>
 <body aria-labelledby="ecosphair">

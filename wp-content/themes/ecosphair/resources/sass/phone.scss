@@ -1,16 +1,41 @@
 @media (max-width: 480px) {
   //-----------------------------1
+
   body {
     font-size: 15px; /*17/16*/
   }
 
   //------------------2
+
   main section {
     margin-bottom: 10em;
   }
+
   //-----------------------------10
+
   .singleModule__galerie {
     max-width: 310px;
+  }
+
+  .burger__line { /*10*/
+    background: #01595A;
+    display: block;
+    height: 3px;
+    width: 100%;
+  }
+
+  .line1 { /*10*/
+    transform-origin: 5% 50%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line2 { /*10*/
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .line3 { /*10*/
+    transform-origin: 10% 100%;
+    transition: transform 0.4s ease-in-out;
   }
 
   .header__nav {
@@ -33,6 +58,68 @@
     top: -100%;
     z-index: -1;
     transition: all 0.3s ease-in-out;
+  }
+
+  .nav__logo {
+    display: block;
+    min-height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 10;
+    background-image: url("../../img/ecosph_air-logo.svg");
+    background-repeat: no-repeat;
+    background-position: 4% 50%;
+    background-size: 20%;
+    padding: 0;
+    background-color: #AEE6F2;
+    justify-self: start;
+  }
+
+  .nav__checkbox { /*10*/
+    cursor: pointer;
+    display: block;
+    height: 2em;
+    opacity: 0;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 2em;
+    z-index: 25;
+  }
+
+  .nav__burger { /*10*/
+    display: flex;
+    flex-direction: column;
+    height: 1.2em;
+    justify-content: space-between;
+    justify-self: center;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 1.7em;
+    z-index: 15;
+  }
+
+  .nav__liste {
+    margin-top: 40%;
+    flex-direction: column;
+  }
+
+  .nav__languages {
+    text-align: center;
+    align-self: auto;
+    justify-content: center;
+  }
+
+  .nav__item {
+    //flex: 1;
+    padding-bottom: 1em;
+    text-align: center;
+    align-self: auto;
+    border-bottom: 1px solid #5ABFBF;
+    justify-content: center;
   }
 
   .intro {
@@ -61,6 +148,7 @@
     padding: 0;
     margin-right: 0;
   }
+
   .why__wysiwyg {
     margin-right: 0;
   }
@@ -74,89 +162,6 @@
   .about {
     margin-bottom: 0;
   }
-  .nav__logo {
-    display: block;
-    min-height: 40px;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 10;
-    background-image: url("../../img/ecosph_air-logo.svg");
-    background-repeat: no-repeat;
-    background-position: 4% 50%;
-    background-size: 20%;
-    padding: 0;
-    background-color: #AEE6F2;
-    justify-self: start;
-  }
-  .nav__logo a.logo__link {
-    width: 30%;
-  }
-
-  .nav__checkbox { /*10*/
-    cursor: pointer;
-    display: block;
-    height: 2em;
-    opacity: 0;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    width: 2em;
-    z-index: 25;
-  }
-
-  .nav__burger { /*10*/
-    display: flex;
-    flex-direction: column;
-    height: 1.2em;
-    justify-content: space-between;
-    justify-self: center;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    width: 1.7em;
-    z-index: 15;
-  }
-
-  .burger__line { /*10*/
-    background: #01595A;
-    display: block;
-    height: 3px;
-    width: 100%;
-  }
-
-  .line1 { /*10*/
-    transform-origin: 5% 50%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .line2 { /*10*/
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .line3 { /*10*/
-    transform-origin: 10% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-  .nav__liste {
-    margin-top: 40%;
-    flex-direction: column;
-  }
-  .nav__languages {
-    text-align: center;
-    align-self: auto;
-    justify-content: center;
-  }
-  .nav__item {
-    //flex: 1;
-    padding-bottom: 1em;
-    text-align: center;
-    align-self: auto;
-    border-bottom: 1px solid #5ABFBF;
-    justify-content: center;
-  }
-
 
   .help__text {
     margin-bottom: 3.529411764705882em; /*60/17*/
@@ -178,27 +183,19 @@
   .layout__contact {
     margin-bottom: 0;
   }
-  .footer {
-    padding: 0;
-  }
-
-  .footer__body {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1em;
-  }
-
-  .footer__legale {
-    margin-top: 0.625em; /*10/16*/
-  }
 
   .projects__list {
     display: grid;
     grid-template-rows: repeat(6, 37.5em);
     grid-template-columns: 1fr;
   }
+
   .singleModule {
     margin-bottom: 7em;
+  }
+
+  .singleModule__nav {
+    margin-bottom: 2em;
   }
 
   .singleModule__questions {
@@ -252,6 +249,7 @@
     grid-gap: 4em;
     justify-content: center;
   }
+
   .singleModule__galerie {
     margin-right: 1.875em;
     margin-left: 1.875em;
@@ -270,14 +268,12 @@
     grid-template-columns: 1fr;
   }
 
-  .form__label {
-    font-size: inherit;
-  }
   .history__list {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 0;
   }
+
   .coordinates {
     padding-bottom: 3em;
     margin-bottom: 0;
@@ -287,17 +283,36 @@
     margin-left: 0;
     margin-top: 4em;
   }
+
   .form__button {
     margin-bottom: 14em;
   }
-  .singleModule__nav {
-    margin-bottom: 2em;
+
+  .form__label {
+    font-size: inherit;
   }
+
+  .footer {
+    padding: 0;
+  }
+
+  .footer__body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .footer__legale {
+    margin-top: 0.625em; /*10/16*/
+  }
+
   //-----------------------------11
+
   h3.information__title {
     margin-top: 2em;
     margin-bottom: 1em;
   }
+
   //-----------------------------20
   .nav__item:nth-of-type(2) {
     flex: none;
@@ -309,6 +324,7 @@
     padding-bottom: 1em;
 
   }
+
   .nav__liste, .languages {
     justify-content: center;
     gap: 20px;
@@ -319,21 +335,13 @@
     border-left: 1px solid #5ABFBF;
     padding-left: 1em;
   }
-  .legales__content, .conditions__content {
-    flex-direction: column;
-    min-width: 0;
-  }
 
-  .legales__section, .conditions__section {
-    border-bottom: 2px solid #A0BF35;
-    border-right: none;
-    margin-bottom: 0;
-  }
   .nav__item:first-child {
     background-image: none;
     min-height: auto;
     min-width: auto;
   }
+
   .why, .history {
     margin-bottom: 100px;
   }
@@ -341,6 +349,7 @@
   .videos, .articles {
     margin-left: 0;
   }
+
   .actor__article, .who__article {
     display: block;
   }
@@ -352,6 +361,7 @@
     margin-top: 4em;
 
   }
+
   .project:nth-of-type(4) {
     grid-row: 3;
   }
@@ -359,40 +369,67 @@
   .singleModule__galerie:nth-of-type(2) {
     margin-top: 0;
   }
+
+  .legales__content, .conditions__content {
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .legales__section, .conditions__section {
+    border-bottom: 2px solid #A0BF35;
+    border-right: none;
+    margin-bottom: 0;
+  }
+
   //-----------------------------21
+
   .nav__item a, .languages a {
     font-size: 20px;
     text-transform: uppercase;
   }
+
   .nav__item:first-child a {
     position: relative;
     opacity: 1;
   }
+
+  .nav__logo a.logo__link {
+    width: 30%;
+  }
+
   .articles h2.articles__title {
     max-width: 250px;
     margin-bottom: 2em;
   }
+
   //-----------------------------30
+
   .nav__checkbox:checked ~ .nav__position { /*30*/
     top: 0;
     transition: all 0.3s ease-in-out;
   }
+
   .project:nth-of-type(1) .project__cards {
     left: 10%;
   }
+
   .article__list, .videos .video__list {
     margin-top: 2.5em;
   }
+
   .modules__links, .articles__links, .singleModule__links {
     position: relative;
     font-size: 0.7333333333333333em; /*11/15*/
   }
+
   //-----------------------------33
+
   article.article__module, article.article__article, article.video {
     top: 0;
     left: 0;
     margin-right: 0;
   }
+
   //-----------------------------40
   .nav__checkbox:checked ~ .burger .line1 { /*40*/
     transform: rotate(45deg);
@@ -405,10 +442,13 @@
   .nav__checkbox:checked ~ .burger .line2 { /*40*/
     transform: scaleY(0);
   }
+
   .intro__links, .help__links, .actor__link, .form__button {
     font-size: 0.7333333333333333em; /*11/15*/
   }
+
   //------------------50
+
   .help__figure, .intro__figure, .actor__figure, .contact__figure, .why__figure, .why__thumb {
     position: absolute;
     width: 1px;
@@ -421,14 +461,18 @@
     border: 0;
     outline: none;
   }
+
   //------------------60
+
   .modules .module .article__module, .articles .article .article__article {
     margin-right: 1.875em;
     margin-left: 1.875em;
     margin-bottom: 1em;
 
   }
+
   //------------------70
+
   .actor .actor__article .actor__figure, .who .who__article .who__figure, .history__svg {
     position: absolute;
     width: 1px;
@@ -441,7 +485,9 @@
     border: 0;
     outline: none;
   }
+
   //------------------100
+
   .layout__help, .layout__module, .layout__article, .layout__project, .singleModule, .layout__contact, .layout__article, .about, .layout__legales, .layout__conditions {
     display: block;
     padding: 0 2.176470588235294em; /*37/17*/
@@ -453,11 +499,13 @@
   }
 
   //-------------------------------------118
+
   h2.help__title, h2.modules__title, h2.actor__title, h2.article__title, h3.articles__title, h2.confident__title, h2.coordinate__title, h3.information__title, .why__title, .history__title, .who__title {
     font-size: 1.333333333333333em; /*20/15*/
   }
 
   //-------------------------------------132
+
   h3.help__title, h3.module__title, h3.actor__title, h3.article__title, h4.article__title, h3.video__title, h4.video__title, h3.project__title, h4.information__title, h5.information__who, h4.who__title, .coordinates h4 {
     font-size: 1.133333333333333em; /*17/15*/
   }

@@ -3,7 +3,7 @@
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 	<main class="layout contact">
 		<section aria-labelledby="contact" class="layout__contact">
-			<h2 id="contact" class="contact__title" aria-level="2"><?= get_the_title(); ?></h2>
+			<h2 id="contact" class="contact__title slide-in" aria-level="2"><?= get_the_title(); ?></h2>
 			<div class="contact__position">
 				<div class="contact__content">
 					<figure class="contact__figure">
@@ -14,16 +14,16 @@
 							 alt="Photo de quelqu'un qui rédige un mail" class="contact__image">
 					</figure>
 					<section aria-labelledby="info" class="information">
-						<h3 id="info" class="information__title" aria-level="3"><?= __('Nos coordonnées', 'ecosphair') ?></h3>
-						<div class="information__position">
+						<h3 id="info" class="information__title slide-in" aria-level="3"><?= __('Nos coordonnées', 'ecosphair') ?></h3>
+						<div class="information__position" >
 							<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
 								<article aria-labelledby="<?= get_post_field('post_name') ?>" class="information__article">
-									<h4 id="<?= get_post_field('post_name') ?>" class="information__title" aria-level="4"><?= get_the_title() ?></h4>
-									<section aria-labelledby="<?= get_post_field('post_name') ?>_info" class="information__contact">
-										<h5 id="<?= get_post_field('post_name') ?>_info" class="information__who" aria-level="5" ><?= get_field('nom') ?></h5>
-										<p class="information__where"><?= get_field('lieu') ?></p>
-										<p class="information__mail"><?= get_field('email') ?></p>
-										<p class="information__phone"><?= get_field('telephone') ?></p>
+									<h4 id="<?= get_post_field('post_name') ?>" class="information__title slide-in" aria-level="4"><?= get_the_title() ?></h4>
+									<section aria-labelledby="<?= get_post_field('post_name') ?>_info" class="information__contact" itemscope itemtype="https://schema.org/Person">
+										<h5 id="<?= get_post_field('post_name') ?>_info" class="information__who slide-in" aria-level="5" itemprop="name"><?= get_field('nom') ?></h5>
+										<p class="information__where" itemprop="affiliation"><?= get_field('lieu') ?></p>
+										<p class="information__mail" itemprop="email"><?= get_field('email') ?></p>
+										<p class="information__phone" itemprop="telephone"><?= get_field('telephone') ?></p>
 									</section>
 								</article>
 							<?php endwhile; ?>

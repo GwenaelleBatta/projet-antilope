@@ -1,21 +1,45 @@
-// FADE-IN
 console.log('test')
-const items = document.getElementsByClassName('fade-in');
-console.log(items)
-for (const item of items) {
-    item.classList.add('fade');
-}
-console.log(items)
-const cb = function(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('inview');
+
+
+class Ecosphair_Controller {
+    constructor() {
+        //Ici le DOM n'est pas encore prêt
+        //Pour le moment rien à faire
+        this.body = document.body
+    }
+
+    run() {
+        //Ici le DOM est prêt
+        document.documentElement.classList.add('js-enabled');
+        // FADE-IN
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
         }
-    });
-}
-const obs = new IntersectionObserver(cb);
-for(let i=0; i < items.length; i++){
-    obs.observe(items[i]);
+
+        let aTargets = document.querySelectorAll('.slide-in');
+        let observer = new IntersectionObserver(callback, options);
+        for (const target of aTargets) {
+            observer.observe(target);
+            target.addEventListener('load', (event) => {
+            })
+        }
+        console.log(aTargets)
+
+        function callback(entries, observer) {
+            entries.forEach(entry => {
+                // chaque élément de entries correspond à une variation
+                // d'intersection pour un des éléments cible:
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        };
+    }
 }
 
-
+window.ecosphair = new Ecosphair_Controller();
+window.addEventListener('load', () => window.ecosphair.run())

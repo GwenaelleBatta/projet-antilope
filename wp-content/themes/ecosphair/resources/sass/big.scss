@@ -4,12 +4,7 @@
     font-size: 1.25em; /*20/16*/
   }
   //---------------------10
-  .confident__text{
-    max-width: 40em;
-  }
-  .singleModule__galerie {
-    max-width: 16.25em; /*325/20*/
-  }
+
   .nav__logo {
     position: absolute;
     width: 1px;
@@ -21,33 +16,52 @@
     white-space: nowrap; /* added line */
     border: 0;
   }
+
   .intro__position {
     margin-right: 8em;
   }
+
   .projects__list {
     grid-gap: 12em;
   }
+
   .project__cards {
     justify-content: center;
     align-items: center;
   }
-  .why__wysiwyg {
-    margin-right: 8em;
+
+  .singleModule__galerie {
+    max-width: 16.25em; /*325/20*/
   }
-  .layout__help {
-    grid-gap: 8em;
-  }
+
   .singleModule__picture {
     justify-content: center;
   }
+
+  .why__wysiwyg {
+    margin-right: 8em;
+  }
+
+  .layout__help {
+    grid-gap: 8em;
+  }
+
+  .confident__text{
+    max-width: 40em;
+  }
+
   .contact__figure {
     top: -5%;
   }
+
   //---------------------11
+
   h3.information__title {
     margin-top: 2.5em;
   }
+
   //---------------------20
+
   .nav__checkbox, .burger { /*20*/
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -59,25 +73,34 @@
     white-space: nowrap; /* added line */
     width: 1px;
   }
+
   .videos, .articles {
     margin-left: 0;
   }
+
   //---------------------32
+
   article.article__module, article.article__article, article.video {
     margin-right: 5.5em;
   }
+
   //---------------------60
+
   .actor .actor__article:nth-child(even), .who .who__article:nth-child(even) {
     margin-bottom: 8.5em;
   }
+
   //---------------------63
+
   .projects__title, .contact__title, .articles h2.articles__title, h2.legales__title, h2.conditions__title {
     margin-top: 6em;
   }
+
   //---------------------80
   .actor .actor__article:nth-child(even) .actor__figure, .who .who__article:nth-child(even) .who__figure {
     margin-left: 8em;
   }
+
   .actor .actor__article:nth-child(odd) .actor__figure, .who .who__article:nth-child(odd) .who__figure {
     margin-right: 8em;
   }
