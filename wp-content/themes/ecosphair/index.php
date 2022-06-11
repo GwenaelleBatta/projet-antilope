@@ -13,7 +13,7 @@
 	<section aria-labelledby="help" class="layout__help help">
 		<div class="help__content">
 			<h2 id="help" class="help__title slide-in" aria-level="2"><?= __('En quoi ', 'ecosphair') ?><?= get_bloginfo('name'); ?> <?= __(' peut vous aider ?', 'ecosphair') ?></h2>
-			<p class="help__text slide-in"><?= __('L’air joue un rôle primordial pour la vie telle que nous la connaissons sur terre. Une mauvaise qualité de l’air a une incidence négative sur la santé humaine et sur l’environnement au sens large. Ses conséquences sont non seulement de nature sanitaire, écologique et économique mais aussi du point de vue humain: disposer d’un air de qualité et sain doit être un droit fondamental. C\'est pourquoi Ecosph\'air a vu le jour afin d\'aider les gens à combattre la pollution et améliorer la vie de tous grâce à nos formidables modules qui ont été développé dans le cadre d\'une collaboration avec l\'ISSep ainsi que nos étudiant en service électronique et système embarqué au sein de la HEPL (Haute Ecole de la Province de Liège)', 'ecosphair') ?>
+			<p class="help__text slide-in"><?= __('L’air joue un rôle primordial pour la vie telle que nous la connaissons sur terre. Une mauvaise qualité de l’air a une incidence négative sur la santé humaine et sur l’environnement au sens large. Ces conséquences sont non seulement de nature sanitaire, écologique et économique mais aussi du point de vue humain: disposer d’un air de qualité et sain doit être un droit fondamental. C\'est pourquoi Ecosph\'air a vu le jour afin d\'aider les gens à combattre la pollution et améliorer la vie de tous grâce à nos formidables modules qui ont été développés dans le cadre d\'une collaboration avec l\'ISSep ainsi que nos étudiants en service électronique et système embarqué au sein de la HEPL (Haute Ecole de la Province de Liège)', 'ecosphair') ?>
 			</p>
 			<a href="<?= get_the_permalink(ecosphair_get_template_page('template-about')) ?>"
 			   class="help__links slide-in"> <?= __('En savoir plus', 'ecosphair') ?></a>
@@ -72,7 +72,7 @@
 					<span class="actor__circle slide-in"></span>
 					<span class="actor__circle slide-in"></span>
 					<span class="actor__circle slide-in"></span>
-					<?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'trip__thumb']); ?>
+					<?= get_the_post_thumbnail(null, 'medium_large', ['class' => 'actor__thumb']); ?>
 				</figure>
 			</article>
 		<?php endwhile; ?>

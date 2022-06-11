@@ -51,7 +51,7 @@
 							<span class="actor__circle "></span>
 							<span class="actor__circle"></span>
 							<span class="actor__circle"></span>
-							<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'trip__thumb ']); ?>
+							<?= get_the_post_thumbnail(null, 'post-thumbnail', ['class' => 'actor__thumb ']); ?>
 						</figure>
 					</article>
 				<?php endwhile; ?>

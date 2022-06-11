@@ -53,7 +53,7 @@ Il nous a été demandé de réaliser un site pour un client qui nous était imp
 
 - Page d'accueil ;
 - Page listant les différents modules ;
-- Page d'un seul module
+- Page d'un seul module ;
 - Page à propos ;
 - Page des mentions légales ;
 - Page des conditions générales ;
@@ -68,5 +68,5 @@ Il nous a été demandé de réaliser un site pour un client qui nous était imp
 - PHP
 - Wordpress
 
-
-[Lien vers le site ici](https://ecosphair.gwenaelle-batta.be/fr/)
+### Visiter le site 
+[Ecosph'Air](https://ecosphair.gwenaelle-batta.be/fr/)
