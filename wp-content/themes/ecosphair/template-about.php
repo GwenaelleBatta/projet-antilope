@@ -20,12 +20,12 @@
 				<svg viewBox="0 0 50% 50%" xmlns="http://www.w3.org/2000/svg" class="history__svg">
 					<line x1="20" y1="0" x2="20" y2="1200"  class="history__line"/>
 				</svg>
-				<article class="history__list">
+				<div class="history__list">
 					<?php if (($history = ecosphair_get_history())->have_posts()):while ($history->have_posts()): $history->the_post(); ?>
-						<article aria-labelledby="<?=get_post_field('post__name')?>" class="article__history slide-in">
+						<article aria-labelledby="<?= get_the_title() ?>" class="article__history slide-in">
 							<div class="history__cards">
 								<header class="history__head">
-									<h4 id="<?=get_post_field('post__name')?> " aria-level="4" class="history__title"><?= get_the_title() ?></h4>
+									<h4 id="<?= get_the_title() ?>" aria-level="4" class="history__title"><?= get_the_title() ?></h4>
 								</header>
 								<div class="history__excerpt">
 									<p>
@@ -36,14 +36,14 @@
 						</article>
 					<?php endwhile; ?>
 					<?php endif; ?>
-				</article>
+				</div>
 			</section>
 			<section aria-labelledby="who" class="about__section who">
 				<h3 id="who" class="who__title slide-in" aria-level="3"><?=__('Avec Qui ?', 'ecosphair')?></h3>
 				<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-					<article aria-labelledby="<?=get_post_field('post__name')?>" class="who__article">
+					<article aria-labelledby="<?= get_the_title() ?>" class="who__article">
 						<div class="who__text">
-							<h4 id="<?=get_post_field('post__name')?>" class="who__title slide-in" aria-level="4"><?= get_the_title() ?></h4>
+							<h4 id="<?= get_the_title() ?>" class="who__title slide-in" aria-level="4"><?= get_the_title() ?></h4>
 							<p class="who__text slide-in"><?=get_the_content() ?></p>
 							<a class="who__link slide-in" href="<?= get_the_permalink(ecosphair_get_template_page('template-contact')) ?>"><?= __('Contacter', 'ecosphair') ?></a>
 						</div>

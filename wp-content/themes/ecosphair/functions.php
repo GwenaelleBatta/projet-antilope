@@ -302,6 +302,7 @@ function ecosphair_get_template_page(string $template){
 }
 // Gérer l'envoi de formulaire personnalisé
 add_action('admin_post_submit_contact_form', 'ecosphair_handle_submit_contact_form');
+add_action('admin_post_nopriv_submit_contact_form', 'ecosphair_handle_submit_contact_form');
 
 function ecosphair_handle_submit_contact_form() {
     // Instancier le controlleur du formulaire

@@ -14,7 +14,7 @@
 						<h3 id="coordinate" class="coordinates__title hidden" aria-level="3"><?=__('Mes coordonnées')?></h3>
 						<section aria-labelledby="mail" class="coordinates__mail">
 							<h4 id="mail" class="coordinates__title" aria-level="4"><?= __('E-mail', 'ecosphair') ?></h4>
-							<p class="coordinates__mail mail"itemprop="email">
+							<p class="coordinates__mail mail" itemprop="email">
 								<a href="mailto:ecosphair@issep.com">ecosphair@issep.com</a>
 							</p>
 						</section>

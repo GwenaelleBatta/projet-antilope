@@ -14,28 +14,38 @@
 							 alt="Photo de quelqu'un qui rédige un mail" class="contact__image">
 					</figure>
 					<section aria-labelledby="info" class="information">
-						<h3 id="info" class="information__title slide-in" aria-level="3"><?= __('Nos coordonnées', 'ecosphair') ?></h3>
-						<div class="information__position" >
+						<h3 id="info" class="information__title slide-in"
+							aria-level="3"><?= __('Nos coordonnées', 'ecosphair') ?></h3>
+						<div class="information__position">
 							<?php if (($partners = ecosphair_get_partners())->have_posts()):while ($partners->have_posts()): $partners->the_post(); ?>
-								<article aria-labelledby="<?= get_post_field('post_name') ?>" class="information__article">
-									<h4 id="<?= get_post_field('post_name') ?>" class="information__title slide-in" aria-level="4"><?= get_the_title() ?></h4>
-									<section aria-labelledby="<?= get_post_field('post_name') ?>_info" class="information__contact" itemscope itemtype="https://schema.org/Person">
-										<h5 id="<?= get_post_field('post_name') ?>_info" class="information__who slide-in" aria-level="5" itemprop="name"><?= get_field('nom') ?></h5>
-										<p class="information__where" itemprop="affiliation"><?= get_field('lieu') ?></p>
+								<article aria-labelledby="<?= get_post_field('post_name') ?>"
+										 class="information__article">
+									<h4 id="<?= get_post_field('post_name') ?>" class="information__title slide-in"
+										aria-level="4"><?= get_the_title() ?></h4>
+									<section aria-labelledby="<?= get_post_field('post_name') ?>_info"
+											 class="information__contact" itemscope
+											 itemtype="https://schema.org/Person">
+										<h5 id="<?= get_post_field('post_name') ?>_info"
+											class="information__who slide-in" aria-level="5"
+											itemprop="name"><?= get_field('nom') ?></h5>
+										<p class="information__where"
+										   itemprop="affiliation"><?= get_field('lieu') ?></p>
 										<p class="information__mail" itemprop="email"><?= get_field('email') ?></p>
-										<p class="information__phone" itemprop="telephone"><?= get_field('telephone') ?></p>
+										<p class="information__phone"
+										   itemprop="telephone"><?= get_field('telephone') ?></p>
 									</section>
 								</article>
 							<?php endwhile; ?>
 							<?php endif; ?>
 						</div>
+					</section>
 				</div>
 				<div class="contact__forms">
 					<?php if (!isset($_SESSION['contact_form_feedback']) || !$_SESSION['contact_form_feedback']['success']) : ?>
-						<form action="<?= substr(get_home_url(), 0,-2); ?>wp-admin/admin-post.php" method="POST"
+						<form action="<?= substr(get_home_url(), 0, -2); ?>wp-admin/admin-post.php" method="POST"
 							  class="contact__form form">
 							<?php if (isset($_SESSION['contact_form_feedback'])) : ?>
-								<p class="form__error"><?= __('Oups ! Il y a des erreurs dans le formulaire', 'ecosphair') ?></p>
+								<p class="form__error general__error"><?= __('Oups ! Il y a des erreurs dans le formulaire', 'ecosphair') ?></p>
 							<?php endif; ?>
 							<div class="form__field">
 								<label for="who" class="form__label"><?= __('À qui', 'ecosphair') ?></label>
@@ -82,7 +92,7 @@
 							<div class="form__field">
 								<label for="rules" class="form__checkbox">
 									<input type="checkbox" name="rules" id="rules" value="1"/>
-									<span class="form__checklabel"><?= str_replace(':condition', '<a href="'. get_the_permalink(ecosphair_get_template_page('template-condition')) .'">' . __('conditions générales d\'utilisation', 'ecosphair') . '</a>', __('J\'accepte les :condition ', 'ecosphair')) ?></span>
+									<span class="form__checklabel"><?= str_replace(':condition', '<a href="' . get_the_permalink(ecosphair_get_template_page('template-condition')) . '">' . __('conditions générales d\'utilisation', 'ecosphair') . '</a>', __('J\'accepte les :condition ', 'ecosphair')) ?></span>
 								</label>
 								<?= ecosphair_get_contact_field_error('rules'); ?>
 							</div>
@@ -93,11 +103,13 @@
 							</div>
 						</form>
 					<?php else : ?>
-						<p class="form__end" id="contact"><?= __('Merci ! Votre message a bien été envoyé.', 'ecosphair') ?></p>
+						<p class="form__end"
+						   id="contact"><?= __('Merci ! Votre message a bien été envoyé.', 'ecosphair') ?></p>
 						<?php unset($_SESSION['contact_form_feedback']); endif; ?>
 				</div>
 			</div>
 		</section>
 	</main>
+	<?php unset($_SESSION['contact_form_feedback']); ?>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
